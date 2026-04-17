@@ -1,9 +1,9 @@
-import { LayoutDashboard, BookOpen, Users, Lightbulb, GraduationCap, Globe, HelpCircle } from "lucide-react";
+import { LayoutDashboard, BookOpen, Users, Lightbulb, GraduationCap, Globe, HelpCircle, Bookmark } from "lucide-react";
 import type { Language } from "@/lib/translations";
 import { t } from "@/lib/translations";
 import siinqeeLogo from "@/assets/siinqee-logo.webp";
 
-export type TabId = "dashboard" | "knowledge-base" | "expert-locator" | "lessons-learned" | "innovation-hub" | "help-faq";
+export type TabId = "dashboard" | "knowledge-base" | "expert-locator" | "lessons-learned" | "innovation-hub" | "bookmarks" | "help-faq";
 
 const navItems: { id: TabId; icon: typeof LayoutDashboard; labelKey: keyof typeof import("@/lib/translations").translations.en }[] = [
   { id: "dashboard", icon: LayoutDashboard, labelKey: "dashboard" },
@@ -11,6 +11,7 @@ const navItems: { id: TabId; icon: typeof LayoutDashboard; labelKey: keyof typeo
   { id: "expert-locator", icon: Users, labelKey: "expertLocator" },
   { id: "lessons-learned", icon: GraduationCap, labelKey: "lessonsLearned" },
   { id: "innovation-hub", icon: Lightbulb, labelKey: "innovationHub" },
+  { id: "bookmarks", icon: Bookmark, labelKey: "myBookmarks" },
   { id: "help-faq", icon: HelpCircle, labelKey: "helpCenter" },
 ];
 

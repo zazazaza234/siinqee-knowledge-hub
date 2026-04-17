@@ -1,9 +1,11 @@
-import { Folder, FileText, Download, Eye, Search, X, ArrowLeft } from "lucide-react";
+import { Folder, FileText, Download, Eye, Search, X, ArrowLeft, Bookmark } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { toast } from "sonner";
 import type { Language } from "@/lib/translations";
 import { t } from "@/lib/translations";
 import { documents } from "@/lib/dummy-data";
+import { useBookmarks } from "@/hooks/use-personalization";
 
 interface KnowledgeBaseViewProps {
   lang: Language;
@@ -20,6 +22,12 @@ export function KnowledgeBaseView({ lang }: KnowledgeBaseViewProps) {
   const [search, setSearch] = useState("");
   const [selectedDept, setSelectedDept] = useState<string | null>(null);
   const [selectedDoc, setSelectedDoc] = useState<typeof documents[number] | null>(null);
+  const { isBookmarked, toggle: toggleBookmark } = useBookmarks();
+
+  const handleBookmark = (doc: typeof documents[number]) => {
+    const now = toggleBookmark({ id: doc.id, type: "document", titleEn: doc.title, titleAm: doc.titleAm, subtitleEn: doc.dept, subtitleAm: doc.deptAm });
+    toast.success(t(lang, now ? "bookmarkAdded" : "bookmarkRemoved"));
+  };
 
   const filtered = documents.filter((d) => {
     const matchesSearch = d.title.toLowerCase().includes(search.toLowerCase()) || d.dept.toLowerCase().includes(search.toLowerCase()) || d.titleAm.includes(search);
@@ -107,10 +115,13 @@ export function KnowledgeBaseView({ lang }: KnowledgeBaseViewProps) {
                   <td className="py-3 px-4 text-muted-foreground">{doc.date}</td>
                   <td className="py-3 px-4 text-right">
                     <div className="flex items-center justify-end gap-2">
+                      <button onClick={() => handleBookmark(doc)} className={`p-1.5 rounded-md transition-colors ${isBookmarked(doc.id, "document") ? "text-gold bg-gold-muted" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`} title={t(lang, "bookmark")}>
+                        <Bookmark size={14} fill={isBookmarked(doc.id, "document") ? "currentColor" : "none"} />
+                      </button>
                       <button onClick={() => setSelectedDoc(doc)} className="p-1.5 rounded-md hover:bg-muted transition-colors text-muted-foreground hover:text-foreground">
                         <Eye size={14} />
                       </button>
-                      <button className="p-1.5 rounded-md hover:bg-muted transition-colors text-muted-foreground hover:text-foreground">
+                      <button onClick={() => toast.success(lang === "en" ? "Download started" : "Buufachuun jalqabameera")} className="p-1.5 rounded-md hover:bg-muted transition-colors text-muted-foreground hover:text-foreground">
                         <Download size={14} />
                       </button>
                     </div>

@@ -1,9 +1,11 @@
-import { MessageSquare, Calendar, User, X, Send, CheckCircle } from "lucide-react";
+import { MessageSquare, Calendar, User, X, Send, CheckCircle, Bookmark } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { toast } from "sonner";
 import type { Language } from "@/lib/translations";
 import { t } from "@/lib/translations";
 import { experts } from "@/lib/dummy-data";
+import { useBookmarks } from "@/hooks/use-personalization";
 
 interface ExpertLocatorViewProps {
   lang: Language;
@@ -29,6 +31,12 @@ export function ExpertLocatorView({ lang }: ExpertLocatorViewProps) {
   const [bookingTopic, setBookingTopic] = useState("");
   const [showSuccess, setShowSuccess] = useState<"message" | "booking" | null>(null);
   const [searchTag, setSearchTag] = useState("");
+  const { isBookmarked, toggle: toggleBookmark } = useBookmarks();
+
+  const handleBookmark = (expert: typeof experts[number]) => {
+    const now = toggleBookmark({ id: expert.id, type: "expert", titleEn: expert.name, titleAm: expert.nameAm, subtitleEn: expert.title, subtitleAm: expert.titleAm });
+    toast.success(t(lang, now ? "bookmarkAdded" : "bookmarkRemoved"));
+  };
 
   const openModal = (expert: typeof experts[number], mode: ModalMode) => {
     setSelectedExpert(expert);
@@ -85,14 +93,21 @@ export function ExpertLocatorView({ lang }: ExpertLocatorViewProps) {
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {filteredExperts.map((expert, i) => (
           <motion.div key={expert.id} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.07 }} className="bg-card border border-border rounded-xl p-5 card-hover">
-            <div className="flex items-center gap-3 mb-3">
+            <div className="flex items-start gap-3 mb-3">
               <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${avatarColors[i % avatarColors.length]} flex items-center justify-center flex-shrink-0`}>
                 <User size={20} className="text-white" />
               </div>
-              <div>
+              <div className="flex-1 min-w-0">
                 <h3 className="font-display font-semibold text-foreground text-sm">{lang === "en" ? expert.name : expert.nameAm}</h3>
                 <p className="text-xs text-muted-foreground">{lang === "en" ? expert.title : expert.titleAm}</p>
               </div>
+              <button
+                onClick={() => handleBookmark(expert)}
+                className={`p-1.5 rounded-md transition-colors ${isBookmarked(expert.id, "expert") ? "text-gold bg-gold-muted" : "text-muted-foreground hover:bg-muted"}`}
+                title={t(lang, "bookmark")}
+              >
+                <Bookmark size={14} fill={isBookmarked(expert.id, "expert") ? "currentColor" : "none"} />
+              </button>
             </div>
 
             <p className="text-xs text-muted-foreground mb-3 line-clamp-2">{lang === "en" ? expert.bio : expert.bioAm}</p>

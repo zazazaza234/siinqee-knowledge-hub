@@ -1,6 +1,7 @@
 import { LayoutDashboard, BookOpen, Users, Lightbulb, GraduationCap, Globe, HelpCircle } from "lucide-react";
 import type { Language } from "@/lib/translations";
 import { t } from "@/lib/translations";
+import siinqeeLogo from "@/assets/siinqee-logo.webp";
 
 export type TabId = "dashboard" | "knowledge-base" | "expert-locator" | "lessons-learned" | "innovation-hub" | "help-faq";
 

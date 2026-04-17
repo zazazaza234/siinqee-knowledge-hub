@@ -7,6 +7,7 @@ import { ExpertLocatorView } from "@/components/ExpertLocatorView";
 import { LessonsLearnedView } from "@/components/LessonsLearnedView";
 import { InnovationHubView } from "@/components/InnovationHubView";
 import { HelpFAQView } from "@/components/HelpFAQView";
+import { BookmarksView } from "@/components/BookmarksView";
 import { NotificationsPanel } from "@/components/NotificationsPanel";
 import type { Language } from "@/lib/translations";
 
@@ -39,6 +40,8 @@ function Index() {
         return <LessonsLearnedView lang={lang} />;
       case "innovation-hub":
         return <InnovationHubView lang={lang} />;
+      case "bookmarks":
+        return <BookmarksView lang={lang} onNavigate={setActiveTab} />;
       case "help-faq":
         return <HelpFAQView lang={lang} />;
     }

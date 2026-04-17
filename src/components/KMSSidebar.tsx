@@ -27,8 +27,8 @@ export function KMSSidebar({ activeTab, onTabChange, lang, onLangChange, collaps
   return (
     <aside className={`fixed left-0 top-0 h-screen bg-sidebar text-sidebar-foreground flex flex-col transition-all duration-300 z-50 ${collapsed ? "w-[68px]" : "w-64"}`}>
       <div className="flex items-center gap-3 px-4 py-5 border-b border-sidebar-border">
-        <div className="w-9 h-9 rounded-lg gold-gradient flex items-center justify-center flex-shrink-0">
-          <span className="text-navy-dark font-display font-bold text-sm">SB</span>
+        <div className="w-9 h-9 rounded-lg overflow-hidden flex items-center justify-center flex-shrink-0 bg-white">
+          <img src={siinqeeLogo} alt="Siinqee Bank logo" className="w-full h-full object-cover" />
         </div>
         {!collapsed && (
           <div className="overflow-hidden">
@@ -49,9 +49,9 @@ export function KMSSidebar({ activeTab, onTabChange, lang, onLangChange, collaps
         })}
       </nav>
       <div className="px-3 pb-3 space-y-2">
-        <button onClick={() => onLangChange(lang === "en" ? "am" : "en")} className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-sidebar-foreground/70 hover:bg-sidebar-accent/50 transition-colors">
+        <button onClick={() => onLangChange(lang === "en" ? "om" : "en")} className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-sidebar-foreground/70 hover:bg-sidebar-accent/50 transition-colors">
           <Globe size={18} />
-          {!collapsed && <span>{lang === "en" ? "አማርኛ" : "English"}</span>}
+          {!collapsed && <span>{lang === "en" ? "Afaan Oromoo" : "English"}</span>}
         </button>
         <button onClick={onToggleCollapse} className="w-full flex items-center justify-center px-3 py-2 rounded-lg text-sidebar-foreground/40 hover:text-sidebar-foreground/70 transition-colors">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className={`transition-transform ${collapsed ? "rotate-180" : ""}`}>

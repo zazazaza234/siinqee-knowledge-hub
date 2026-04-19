@@ -12,10 +12,10 @@ interface KnowledgeBaseViewProps {
 }
 
 const departments = [
-  { nameEn: "Microfinance", nameAm: "ማይክሮፋይናንስ", count: 342, color: "bg-chart-1", deptKey: "Microfinance" },
-  { nameEn: "Corporate Services", nameAm: "የድርጅት አገልግሎቶች", count: 518, color: "bg-chart-2", deptKey: "Corporate Services" },
-  { nameEn: "Human Capital Management", nameAm: "የሰው ሀብት አስተዳደር", count: 196, color: "bg-chart-3", deptKey: "Human Capital Management" },
-  { nameEn: "Risk & Compliance", nameAm: "ስጋት እና ተገዢነት", count: 421, color: "bg-chart-4", deptKey: "Risk & Compliance" },
+  { nameEn: "Microfinance", nameOm: "Maaykiroofaayinaansii", count: 342, color: "bg-chart-1", deptKey: "Microfinance" },
+  { nameEn: "Corporate Services", nameOm: "Tajaajila Dhaabbataa", count: 518, color: "bg-chart-2", deptKey: "Corporate Services" },
+  { nameEn: "Human Capital Management", nameOm: "Bulchiinsa Qabeenya Namaa", count: 196, color: "bg-chart-3", deptKey: "Human Capital Management" },
+  { nameEn: "Risk & Compliance", nameOm: "Balaa fi Eegumsa Seeraa", count: 421, color: "bg-chart-4", deptKey: "Risk & Compliance" },
 ];
 
 export function KnowledgeBaseView({ lang }: KnowledgeBaseViewProps) {
@@ -60,7 +60,7 @@ export function KnowledgeBaseView({ lang }: KnowledgeBaseViewProps) {
                 <div className={`w-10 h-10 rounded-lg ${dept.color}/15 flex items-center justify-center mb-3`}>
                   <Folder size={18} className="text-gold" />
                 </div>
-                <h3 className="font-display font-semibold text-sm text-foreground">{lang === "en" ? dept.nameEn : dept.nameAm}</h3>
+                <h3 className="font-display font-semibold text-sm text-foreground">{lang === "en" ? dept.nameEn : dept.nameOm}</h3>
                 <p className="text-xs text-muted-foreground mt-0.5">{dept.count} {t(lang, "documents").toLowerCase()}</p>
               </motion.div>
             );

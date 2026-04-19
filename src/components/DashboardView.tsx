@@ -85,16 +85,25 @@ export function DashboardView({ lang, onNavigate }: DashboardViewProps) {
 
   const typeIcons = { document: FileText, expert: Users, quicklink: Star, lesson: BookOpen };
   const typeLabels = { document: "Document", expert: "Expert", quicklink: "Quick Link", lesson: "Lesson" };
+  const { user } = useAuth();
+  const { activity, clear } = useActivity();
+  const stats = useMemo(() => allStats.filter((s) => !user || s.roles.includes(user.role)), [user]);
+  const roleLabel = user ? (lang === "en" ? ROLE_META[user.role].en : ROLE_META[user.role].om) : "";
 
   return (
     <div className="space-y-8">
       {/* Welcome & Search */}
       <div>
         <motion.h1 initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="text-2xl font-display font-bold text-foreground">
-          {t(lang, "welcomeBack")}, Obbo Tadesse 👋
+          {t(lang, "welcomeBack")}, {user?.name || "Friend"} 👋
         </motion.h1>
-        <p className="text-muted-foreground text-sm mt-1">
-          {lang === "en" ? "Access knowledge, connect with experts, and drive innovation." : "እውቀት ያግኙ፣ ከባለሙያዎች ጋር ይገናኙ፣ እና ፈጠራን ያንቀሳቅሱ።"}
+        <p className="text-muted-foreground text-sm mt-1 flex flex-wrap items-center gap-2">
+          {user && (
+            <span className="inline-flex items-center gap-1.5 text-[11px] px-2 py-0.5 rounded-full bg-gold-muted text-gold font-medium">
+              {roleLabel} · {user.branch}
+            </span>
+          )}
+          <span>{lang === "en" ? "Access knowledge, connect with experts, and drive innovation." : "Beekumsa argadhu, ogeessota waliin walqunnami, kalaqa onnachiisi."}</span>
         </p>
       </div>
 

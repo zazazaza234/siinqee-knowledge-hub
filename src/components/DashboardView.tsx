@@ -147,9 +147,13 @@ export function DashboardView({ lang, onNavigate }: DashboardViewProps) {
                         className="w-full flex items-center gap-3 px-4 py-3 hover:bg-muted/50 transition-colors text-left"
                         onClick={() => {
                           setSearch("");
+                          // Synthesize an activity id from titleEn for tracking
+                          const id = result.titleEn.toLowerCase().replace(/\s+/g, "-").slice(0, 40);
+                          trackActivity({ id, type: result.type as ActivityType, titleEn: result.titleEn, titleAm: result.titleAm });
                           if (result.type === "document" && onNavigate) onNavigate("knowledge-base");
                           if (result.type === "expert" && onNavigate) onNavigate("expert-locator");
                           if (result.type === "lesson" && onNavigate) onNavigate("lessons-learned");
+                          if (result.type === "quicklink" && onNavigate) onNavigate("knowledge-base");
                         }}
                       >
                         <div className="w-8 h-8 rounded-lg bg-gold-muted flex items-center justify-center flex-shrink-0">
@@ -197,7 +201,10 @@ export function DashboardView({ lang, onNavigate }: DashboardViewProps) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 + i * 0.08 }}
-                onClick={() => setSelectedQuickLink(link)}
+                onClick={() => {
+                  setSelectedQuickLink(link);
+                  trackActivity({ id: link.id, type: "quicklink", titleEn: link.titleEn, titleAm: link.titleAm });
+                }}
                 className="bg-card border border-border rounded-xl p-4 card-hover cursor-pointer group"
               >
                 <div className="w-8 h-8 rounded-lg gold-gradient flex items-center justify-center mb-3">

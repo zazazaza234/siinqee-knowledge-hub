@@ -1,22 +1,42 @@
-import { Search, FileText, Users, Lightbulb, GitBranch, ArrowRight, Clock, X, BookOpen, Star } from "lucide-react";
+import { Search, FileText, Users, Lightbulb, GitBranch, ArrowRight, Clock, X, BookOpen, Star, Trash2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useMemo } from "react";
 import type { Language } from "@/lib/translations";
 import { t } from "@/lib/translations";
 import { quickLinks, branchInsights, documents, experts, lessons } from "@/lib/dummy-data";
 import type { TabId } from "@/components/KMSSidebar";
+import { useAuth, ROLE_META, type Role } from "@/hooks/use-auth";
+import { useActivity, trackActivity, type ActivityType } from "@/hooks/use-activity";
 
 interface DashboardViewProps {
   lang: Language;
   onNavigate?: (tab: TabId) => void;
 }
 
-const stats = [
-  { key: "totalDocuments" as const, value: "2,847", icon: FileText, change: "+12%" },
-  { key: "activeExperts" as const, value: "156", icon: Users, change: "+5" },
-  { key: "ideasSubmitted" as const, value: "89", icon: Lightbulb, change: "+23%" },
-  { key: "branchUpdates" as const, value: "34", icon: GitBranch, change: "This week" },
+const allStats = [
+  { key: "totalDocuments" as const, value: "2,847", icon: FileText, change: "+12%", roles: ["officer", "manager", "executive"] as Role[] },
+  { key: "activeExperts" as const, value: "156", icon: Users, change: "+5", roles: ["officer", "manager", "executive"] as Role[] },
+  { key: "ideasSubmitted" as const, value: "89", icon: Lightbulb, change: "+23%", roles: ["manager", "executive"] as Role[] },
+  { key: "branchUpdates" as const, value: "34", icon: GitBranch, change: "This week", roles: ["manager", "executive"] as Role[] },
 ];
+
+const activityIcons: Record<ActivityType, typeof FileText> = {
+  document: FileText, expert: Users, lesson: BookOpen, idea: Lightbulb, quicklink: Star,
+};
+const activityTabs: Record<ActivityType, TabId> = {
+  document: "knowledge-base", expert: "expert-locator", lesson: "lessons-learned", idea: "innovation-hub", quicklink: "knowledge-base",
+};
+
+function timeAgo(ts: number, lang: Language): string {
+  const diff = Date.now() - ts;
+  const m = Math.floor(diff / 60000);
+  if (m < 1) return lang === "en" ? "just now" : "amma";
+  if (m < 60) return lang === "en" ? `${m}m ago` : `Daqiiqaa ${m} dura`;
+  const h = Math.floor(m / 60);
+  if (h < 24) return lang === "en" ? `${h}h ago` : `Sa'aa ${h} dura`;
+  const d = Math.floor(h / 24);
+  return lang === "en" ? `${d}d ago` : `Guyyaa ${d} dura`;
+}
 
 type SearchResult = {
   type: "document" | "expert" | "quicklink" | "lesson";

@@ -190,7 +190,39 @@ export function DashboardView({ lang, onNavigate }: DashboardViewProps) {
         ))}
       </div>
 
-      {/* Quick Links & Branch Insights */}
+      {/* Recent Activity (For You) */}
+      {activity.length > 0 && (
+        <div>
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="font-display font-semibold text-foreground flex items-center gap-2">
+              <Clock size={16} className="text-gold" /> {t(lang, "recentlyViewed")}
+            </h2>
+            <button onClick={clear} className="text-xs text-muted-foreground hover:text-destructive flex items-center gap-1">
+              <Trash2 size={12} /> {t(lang, "clearHistory")}
+            </button>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            {activity.slice(0, 8).map((it) => {
+              const Icon = activityIcons[it.type];
+              return (
+                <button
+                  key={`${it.type}-${it.id}-${it.at}`}
+                  onClick={() => onNavigate?.(activityTabs[it.type])}
+                  className="bg-card border border-border rounded-lg p-3 hover:border-gold/50 transition-colors text-left flex items-start gap-2"
+                >
+                  <div className="w-7 h-7 rounded-md bg-gold-muted flex items-center justify-center flex-shrink-0">
+                    <Icon size={12} className="text-gold" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-xs font-medium text-foreground line-clamp-2 leading-snug">{lang === "en" ? it.titleEn : it.titleAm}</p>
+                    <p className="text-[10px] text-muted-foreground mt-0.5">{timeAgo(it.at, lang)}</p>
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      )}
       <div className="grid lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
           <h2 className="font-display font-semibold text-foreground mb-4">{t(lang, "quickLinks")}</h2>

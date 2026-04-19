@@ -2,11 +2,11 @@ export const quickLinks = [
   {
     id: "ihsan-ifb",
     titleEn: "Ihsan Interest-Free Banking Guidelines",
-    titleAm: "ኢህሳን ወለድ-ነፃ ባንኪንግ መመሪያዎች",
+    titleAm: "Qajeelfama Baankii Ihsaan Dhala-Maleessaa",
     descEn: "Complete guidelines for Sharia-compliant financial products and services",
-    descAm: "ለሸሪዓ ተገዢ የፋይናንስ ምርቶች እና አገልግሎቶች ሙሉ መመሪያዎች",
+    descAm: "Qajeelfama guutuu oomishaalee fi tajaajiloota faayinaansii Shari'aatti walii galan",
     dept: "IFB Services",
-    deptAm: "የIFB አገልግሎቶች",
+    deptAm: "Tajaajila IFB",
     contentEn: `<h2>Ihsan Interest-Free Banking Guidelines</h2>
 <p><strong>Department:</strong> IFB Services</p>
 <p><strong>Version:</strong> 4.1 | <strong>Effective Date:</strong> January 2025</p>
@@ -30,21 +30,38 @@ export const quickLinks = [
 </ul>
 <h3>4. Compliance Requirements</h3>
 <p>All IFB transactions must be reviewed by the Sharia Compliance Officer before disbursement. Monthly reports shall be submitted to the Sharia Advisory Board.</p>`,
-    contentAm: `<h2>ኢህሳን ወለድ-ነፃ ባንኪንግ መመሪያዎች</h2>
-<p><strong>ዲፓርትመንት:</strong> የIFB አገልግሎቶች</p>
-<p><strong>ስሪት:</strong> 4.1 | <strong>ተፈጻሚ ቀን:</strong> ጃንዋሪ 2025</p>
+    contentAm: `<h2>Qajeelfama Baankii Ihsaan Dhala-Maleessaa</h2>
+<p><strong>Kutaa:</strong> Tajaajila IFB</p>
+<p><strong>Lakkoofsa:</strong> 4.1 | <strong>Guyyaa Hojiirra Ooluu:</strong> Amajjii 2025</p>
 <hr/>
-<h3>1. አጠቃላይ እይታ</h3>
-<p>የሲንቄ ባንክ ኢህሳን ወለድ-ነፃ ባንኪንግ (IFB) መስኮት ሸሪዓ ተገዢ የፋይናንስ መፍትሄዎችን ይሰጣል።</p>`,
+<h3>1. Ilaalcha Waliigalaa</h3>
+<p>Foddaan Baankii Ihsaan Dhala-Maleessaa (IFB) Baankii Siinqee furmaata faayinaansii Shari'aatti walii galu kenna. Oomishaaleen hundi murtii Boordii Gorsa Shari'aa fi qajeelfama Baankii Biyyaalessaa Itoophiyaa hordofuu qabu.</p>
+<h3>2. Bu'uuraalee Ijoo</h3>
+<ul>
+<li>Riibaa (dhala) gocha hunda keessatti dhowwuu</li>
+<li>Balaa baankii fi maamilaa gidduutti qooduu</li>
+<li>Faayinaansii qabeenyaan deeggarame qofa</li>
+<li>Haala waliigaltee hunda keessatti ifa ta'uu</li>
+</ul>
+<h3>3. Ramaddii Oomishaa</h3>
+<ul>
+<li><strong>Muraabahaa:</strong> Faayinaansii baasii-fi-bu'aa meeshaalee fi qabeenya</li>
+<li><strong>Mudaarabaa:</strong> Herrega invastimantii bu'aa qooddatu</li>
+<li><strong>Mushaarakaa:</strong> Faayinaansii hojii waliinii</li>
+<li><strong>Ijaaraa:</strong> Faayinaansii kireeffannaa irratti hundaa'e</li>
+<li><strong>Salam:</strong> Waliigaltee bittaa duraa oomisha qonnaa</li>
+</ul>
+<h3>4. Ulaagaa Eegumsaa</h3>
+<p>Gocha IFB hundi Ofiisara Eegumsa Shari'aatiin osoo hin kaffalamiin dura ilaalamuu qaba. Gabaasi ji'aan Boordii Gorsa Shari'aatiif dhiyaata.</p>`,
   },
   {
     id: "wabii-digital",
     titleEn: "Wabii Digital Financing SOPs",
-    titleAm: "ዋቢ ዲጂታል ፋይናንሲንግ ኤስኦፒዎች",
+    titleAm: "SOPs Faayinaansii Dijitaalaa Wabii",
     descEn: "Standard operating procedures for digital lending and mobile banking",
-    descAm: "ለዲጂታል ብድር እና ሞባይል ባንኪንግ መደበኛ የአሠራር ሂደቶች",
+    descAm: "Adeemsa hojii sadarkaa qabu liqii dijitaalaa fi baankii mobaayilaaf",
     dept: "Digital Banking",
-    deptAm: "ዲጂታል ባንኪንግ",
+    deptAm: "Baankii Dijitaalaa",
     contentEn: `<h2>Wabii Digital Financing SOPs</h2>
 <p><strong>Department:</strong> Digital Banking</p>
 <p><strong>Version:</strong> 2.0 | <strong>Effective Date:</strong> March 2025</p>
@@ -60,18 +77,30 @@ export const quickLinks = [
 </ul>
 <h3>3. Disbursement Process</h3>
 <p>Approved loans are disbursed within 60 seconds to the borrower's Siinqee Bank account. Maximum first-time loan: ETB 5,000. Repeat borrowers: up to ETB 50,000.</p>`,
-    contentAm: `<h2>ዋቢ ዲጂታል ፋይናንሲንግ ኤስኦፒዎች</h2>
-<p><strong>ዲፓርትመንት:</strong> ዲጂታል ባንኪንግ</p>
-<p>ዋቢ የሲንቄ ባንክ ቀዳሚ ዲጂታል ብድር መድረክ ነው።</p>`,
+    contentAm: `<h2>SOPs Faayinaansii Dijitaalaa Wabii</h2>
+<p><strong>Kutaa:</strong> Baankii Dijitaalaa</p>
+<p><strong>Lakkoofsa:</strong> 2.0 | <strong>Guyyaa Hojiirra Ooluu:</strong> Bitootessa 2025</p>
+<hr/>
+<h3>1. Ilaalcha Pilaatformii Wabii</h3>
+<p>Wabiin pilaatformii liqii dijitaalaa hangafa Baankii Siinqee yoo ta'u, karaa USSD fi appii mobaayilaatiin liqii xixiqqaa yeroon kennuu dandeessisa.</p>
+<h3>2. Ulaagaa Liqii</h3>
+<ul>
+<li>Herrega qusannoo sochii qabu yoo xiqqaate ji'a 3</li>
+<li>Hanga giddugaleessaa ji'aa ≥ ETB 1,000</li>
+<li>Eenyummaa biyyoolessaa ykn Eenyummaa ganda</li>
+<li>Liqii hin kaffalamne kan hin qabne</li>
+</ul>
+<h3>3. Adeemsa Kaffaltii</h3>
+<p>Liqiin mirkanaa'e sekoondii 60 keessatti gara herrega Baankii Siinqee liqeeffataatti ergama. Liqii yeroo jalqabaa ol'aanaa: ETB 5,000. Kan irra deddeebi'an: hanga ETB 50,000.</p>`,
   },
   {
     id: "sebbeta-ayyo",
     titleEn: "Sebbeta Ayyo Savings Product Details",
-    titleAm: "ሰበታ አዮ ቁጠባ ምርት ዝርዝሮች",
+    titleAm: "Ibsa Oomisha Qusannoo Sebbeta Ayyo",
     descEn: "Product specifications for the Sebbeta Ayyo savings account targeting women entrepreneurs",
-    descAm: "ለሴት ሥራ ፈጣሪዎች ያነጣጠረ የሰበታ አዮ ቁጠባ ሒሳብ የምርት ዝርዝሮች",
+    descAm: "Ibsa oomisha herrega qusannoo Sebbeta Ayyo dubartoota daldaltuuf kaayyeffame",
     dept: "Retail Banking",
-    deptAm: "ችርቻሮ ባንኪንግ",
+    deptAm: "Baankii Daldalaa",
     contentEn: `<h2>Sebbeta Ayyo Savings Product</h2>
 <p><strong>Department:</strong> Retail Banking</p>
 <p><strong>Target:</strong> Women Entrepreneurs</p>
@@ -86,9 +115,20 @@ export const quickLinks = [
 </ul>
 <h3>2. Eligibility</h3>
 <p>Ethiopian women aged 18+ with valid identification. Special provisions for women in cooperatives and self-help groups (Iqub/Idir).</p>`,
-    contentAm: `<h2>ሰበታ አዮ ቁጠባ ምርት</h2>
-<p><strong>ዲፓርትመንት:</strong> ችርቻሮ ባንኪንግ</p>
-<p>ለሴት ሥራ ፈጣሪዎች ያነጣጠረ ልዩ ቁጠባ ምርት።</p>`,
+    contentAm: `<h2>Oomisha Qusannoo Sebbeta Ayyo</h2>
+<p><strong>Kutaa:</strong> Baankii Daldalaa</p>
+<p><strong>Kaayyeffame:</strong> Dubartoota Daldaltuu</p>
+<hr/>
+<h3>1. Amaloota Oomishaa</h3>
+<ul>
+<li>Hanga banamuu xiqqaa hin qabu</li>
+<li>Sadarkaa dhalaa dorgomaa: 8% waggaatti</li>
+<li>Tajaajila baankii mobaayilaa bilisaan</li>
+<li>Inshuraansii xiqqaa walitti hidhame</li>
+<li>Dursa argachuu oomishaalee liqii dubartootaaf</li>
+</ul>
+<h3>2. Ulaagaa</h3>
+<p>Dubartoonni Itoophiyaa umurii 18+ eenyummaa qabaachuu qabu. Dubartootaaf waldaalee fi gareelee of-gargaaruu (Iqub/Idir) keessa jiraniif tumaalee addaa.</p>`,
   },
 ];
 
@@ -96,50 +136,50 @@ export const branchInsights = [
   {
     branch: "Shaggar Branch",
     messageEn: "Customer onboarding tips: Simplify KYC for rural clients using biometric verification.",
-    messageAm: "የደንበኛ ማስተዋወቅ ምክሮች: ባዮሜትሪክ ማረጋገጫ በመጠቀም ለገጠር ደንበኞች KYC ያቅልሉ።",
+    messageAm: "Gorsa galmee maamilaa: KYC maamiltoota baadiyyaaf mirkaneessaa baayoomeetirikiitiin salphisi.",
     time: "2 hours ago",
-    timeAm: "ከ2 ሰዓት በፊት",
+    timeAm: "Sa'aa 2 dura",
   },
   {
     branch: "Jimma Branch",
     messageEn: "Coffee season lending: Increased agricultural loan applications by 40% this quarter.",
-    messageAm: "የቡና ወቅት ብድር: በዚህ ሩብ ዓመት የግብርና ብድር ማመልከቻዎች በ40% ጨመሩ።",
+    messageAm: "Liqii yeroo bunaa: Iyyannoon liqii qonnaa kurmaana kana %40n dabaleera.",
     time: "5 hours ago",
-    timeAm: "ከ5 ሰዓት በፊት",
+    timeAm: "Sa'aa 5 dura",
   },
   {
     branch: "Hawassa Branch",
     messageEn: "New IFB product 'Murabaha Home Finance' gaining traction among young professionals.",
-    messageAm: "አዲስ የIFB ምርት 'ሙራባሃ ቤት ፋይናንስ' በወጣት ባለሙያዎች ዘንድ ተቀባይነት እያገኘ ነው።",
+    messageAm: "Oomishni IFB haaraan 'Faayinaansii Manaa Muraabahaa' ogeeyyii dargaggoo gidduutti fudhatama argachaa jira.",
     time: "1 day ago",
-    timeAm: "ከ1 ቀን በፊት",
+    timeAm: "Guyyaa 1 dura",
   },
   {
     branch: "Adama Branch",
     messageEn: "Best practice: Extended working hours during Irreechaa festival increased deposits by 25%.",
-    messageAm: "ምርጥ ልምድ: በኢሬቻ በዓል ወቅት የተራዘመ የስራ ሰዓት ተቀማጭ ገንዘብን በ25% ጨመረ።",
+    messageAm: "Muuxannoo gaarii: Sa'aa hojii Ayyaana Irreechaatti dheereffame qusannoo %25n dabale.",
     time: "2 days ago",
-    timeAm: "ከ2 ቀናት በፊት",
+    timeAm: "Guyyaa 2 dura",
   },
 ];
 
 export const documents = [
-  { id: "doc-1", title: "Anti-Money Laundering (AML) Policy v3.2", titleAm: "ፀረ-ገንዘብ ማጠብ (AML) ፖሊሲ v3.2", dept: "Risk & Compliance", deptAm: "ስጋት እና ተገዢነት", date: "2024-12-15", contentEn: "This policy outlines Siinqee Bank's AML/CFT framework including customer due diligence (CDD), enhanced due diligence (EDD), suspicious transaction reporting (STR), and sanctions screening procedures. All staff must complete annual AML training.", contentAm: "ይህ ፖሊሲ የሲንቄ ባንክ ፀረ-ገንዘብ ማጠብ ማዕቀፍን ይዘረዝራል።" },
-  { id: "doc-2", title: "Microfinance Loan Disbursement Manual", titleAm: "የማይክሮፋይናንስ ብድር ማስተላለፊያ መመሪያ", dept: "Microfinance", deptAm: "ማይክሮፋይናንስ", date: "2024-11-28", contentEn: "Step-by-step procedures for processing microfinance loans from application to disbursement. Covers group lending, individual micro-loans, and agricultural seasonal credit facilities.", contentAm: "ከማመልከቻ እስከ ማስተላለፍ ድረስ የማይክሮፋይናንስ ብድሮችን ለማስኬድ ደረጃ-በ-ደረጃ ሂደቶች።" },
-  { id: "doc-3", title: "Employee Performance Evaluation Framework", titleAm: "የሠራተኛ አፈጻጸም ግምገማ ማዕቀፍ", dept: "Human Capital Management", deptAm: "የሰው ሀብት አስተዳደር", date: "2025-01-10", contentEn: "Framework for quarterly and annual performance evaluations. Includes KPI setting, 360-degree feedback, competency assessment, and development planning templates.", contentAm: "ለሩብ ዓመት እና ዓመታዊ የአፈጻጸም ግምገማዎች ማዕቀፍ።" },
-  { id: "doc-4", title: "Corporate Credit Assessment Guidelines", titleAm: "የድርጅት ብድር ግምገማ መመሪያዎች", dept: "Corporate Services", deptAm: "የድርጅት አገልግሎቶች", date: "2024-10-22", contentEn: "Guidelines for assessing corporate credit applications including financial analysis, collateral evaluation, industry risk assessment, and credit scoring methodology.", contentAm: "የድርጅት ብድር ማመልከቻዎችን ለመገምገም መመሪያዎች።" },
-  { id: "doc-5", title: "Ihsan Mudarabah Investment Product Spec", titleAm: "ኢህሳን ሙዳራባ ኢንቨስትመንት ምርት ዝርዝር", dept: "IFB Services", deptAm: "የIFB አገልግሎቶች", date: "2025-02-05", contentEn: "Product specification for Mudarabah profit-sharing investment accounts. Includes profit distribution ratios, minimum investment thresholds, and Sharia compliance requirements.", contentAm: "ለሙዳራባ ትርፍ-ማጋራት ኢንቨስትመንት ሂሳቦች ምርት ዝርዝር።" },
-  { id: "doc-6", title: "Digital Banking Security Protocols", titleAm: "የዲጂታል ባንኪንግ ደህንነት ፕሮቶኮሎች", dept: "Risk & Compliance", deptAm: "ስጋት እና ተገዢነት", date: "2025-03-01", contentEn: "Security protocols for mobile banking, internet banking, and USSD channels. Covers two-factor authentication, session management, encryption standards, and incident response.", contentAm: "ለሞባይል ባንኪንግ፣ ኢንተርኔት ባንኪንግ እና USSD ቻናሎች የደህንነት ፕሮቶኮሎች።" },
-  { id: "doc-7", title: "Branch Operations Standardization Guide", titleAm: "የቅርንጫፍ ሥራዎች ደረጃ ማስጠበቂያ መመሪያ", dept: "Corporate Services", deptAm: "የድርጅት አገልግሎቶች", date: "2024-09-15", contentEn: "Standardized operating procedures for all branch operations including cash management, customer service, vault management, and end-of-day reconciliation.", contentAm: "ለሁሉም የቅርንጫፍ ሥራዎች ደረጃውን የጠበቀ የአሠራር ሂደቶች።" },
+  { id: "doc-1", title: "Anti-Money Laundering (AML) Policy v3.2", titleAm: "Imaammata Faallaa Maallaqa Dhiqaa (AML) v3.2", dept: "Risk & Compliance", deptAm: "Balaa fi Eegumsa Seeraa", date: "2024-12-15", contentEn: "This policy outlines Siinqee Bank's AML/CFT framework including customer due diligence (CDD), enhanced due diligence (EDD), suspicious transaction reporting (STR), and sanctions screening procedures. All staff must complete annual AML training.", contentAm: "Imaammanni kun caasaa AML/CFT Baankii Siinqee kan akka CDD, EDD, gabaasa gocha shakkisiisaa fi adeemsa qorannoo dhorkaa of keessatti qabate ibsa." },
+  { id: "doc-2", title: "Microfinance Loan Disbursement Manual", titleAm: "Qajeelfama Kaffaltii Liqii Maaykiroofaayinaansii", dept: "Microfinance", deptAm: "Maaykiroofaayinaansii", date: "2024-11-28", contentEn: "Step-by-step procedures for processing microfinance loans from application to disbursement. Covers group lending, individual micro-loans, and agricultural seasonal credit facilities.", contentAm: "Adeemsa tarkaanfii-tarkaanfiin liqii maaykiroofaayinaansii iyyannoorraa hanga kaffaltiitti qopheessuu. Liqii garee, liqii xiqqaa dhuunfaa fi liqii qonnaa yeroo of keessaa qaba." },
+  { id: "doc-3", title: "Employee Performance Evaluation Framework", titleAm: "Caasaa Madaallii Raawwii Hojjettootaa", dept: "Human Capital Management", deptAm: "Bulchiinsa Qabeenya Namaa", date: "2025-01-10", contentEn: "Framework for quarterly and annual performance evaluations. Includes KPI setting, 360-degree feedback, competency assessment, and development planning templates.", contentAm: "Caasaa madaallii raawwii kurmaanaa fi waggaa. Kaa'umsa KPI, deebii digirii 360, madaallii dandeettii fi karoora misoomaa of keessaa qaba." },
+  { id: "doc-4", title: "Corporate Credit Assessment Guidelines", titleAm: "Qajeelfama Madaallii Liqii Dhaabbataa", dept: "Corporate Services", deptAm: "Tajaajila Dhaabbataa", date: "2024-10-22", contentEn: "Guidelines for assessing corporate credit applications including financial analysis, collateral evaluation, industry risk assessment, and credit scoring methodology.", contentAm: "Qajeelfama iyyannoo liqii dhaabbataa madaaluuf kan xiinxala faayinaansii, madaallii qabeenya wabii fi madaallii balaa hammataa." },
+  { id: "doc-5", title: "Ihsan Mudarabah Investment Product Spec", titleAm: "Ibsa Oomisha Invastimantii Mudaarabaa Ihsaan", dept: "IFB Services", deptAm: "Tajaajila IFB", date: "2025-02-05", contentEn: "Product specification for Mudarabah profit-sharing investment accounts. Includes profit distribution ratios, minimum investment thresholds, and Sharia compliance requirements.", contentAm: "Ibsa oomisha herrega invastimantii Mudaarabaa bu'aa qooddatu. Reeshoo raabsa bu'aa, hanga invastimantii xiqqaa fi ulaagaa Shari'aa of keessaa qaba." },
+  { id: "doc-6", title: "Digital Banking Security Protocols", titleAm: "Hordoffii Eegumsa Baankii Dijitaalaa", dept: "Risk & Compliance", deptAm: "Balaa fi Eegumsa Seeraa", date: "2025-03-01", contentEn: "Security protocols for mobile banking, internet banking, and USSD channels. Covers two-factor authentication, session management, encryption standards, and incident response.", contentAm: "Hordoffii eegumsaa baankii mobaayilaa, baankii intarneetii fi USSD. Mirkaneessaa faktara-lama, bulchiinsa ga'umsaa fi deebii balaa of keessaa qaba." },
+  { id: "doc-7", title: "Branch Operations Standardization Guide", titleAm: "Qajeelfama Sadarkeessuu Hojii Damee", dept: "Corporate Services", deptAm: "Tajaajila Dhaabbataa", date: "2024-09-15", contentEn: "Standardized operating procedures for all branch operations including cash management, customer service, vault management, and end-of-day reconciliation.", contentAm: "Adeemsa hojii sadarkaa qabu kan damee hundaaf — bulchiinsa maallaqaa, tajaajila maamilaa, bulchiinsa kaayyaa fi walsimsiisuu dhuma guyyaa of keessatti qaba." },
 ];
 
 export const experts = [
-  { id: "exp-1", name: "Abdulaziz Mohammed", nameAm: "አብዱላዚዝ መሐመድ", title: "VP - Microfinance", titleAm: "ም/ፕ - ማይክሮፋይናንስ", tags: ["Agricultural Loans", "Rural Banking", "SME Finance"], tagsAm: ["የግብርና ብድር", "የገጠር ባንኪንግ", "SME ፋይናንስ"], email: "abdulaziz.m@siinqeebank.et", phone: "+251-911-234567", bio: "15+ years in microfinance with deep expertise in agricultural lending. Led the Sebbeta Ayyo product launch.", bioAm: "ከ15+ ዓመታት በማይክሮፋይናንስ ልምድ።" },
-  { id: "exp-2", name: "Chaltu Bekele", nameAm: "ጫልቱ በቀለ", title: "Director - IFB Services", titleAm: "ዳይሬክተር - IFB አገልግሎቶች", tags: ["Sharia Compliance", "Murabaha", "Sukuk"], tagsAm: ["ሸሪዓ ተገዢነት", "ሙራባሃ", "ሱኩክ"], email: "chaltu.b@siinqeebank.et", phone: "+251-911-345678", bio: "Pioneered Siinqee Bank's IFB window. Expert in Sharia-compliant product design.", bioAm: "የሲንቄ ባንክ IFB መስኮትን መስራች።" },
-  { id: "exp-3", name: "Dereje Hailu", nameAm: "ደረጀ ኃይሉ", title: "Chief Risk Officer", titleAm: "ዋና የስጋት ኦፊሰር", tags: ["Cyber Security", "AML/CFT", "Operational Risk"], tagsAm: ["ሳይበር ደህንነት", "AML/CFT", "ሥራ ላይ ስጋት"], email: "dereje.h@siinqeebank.et", phone: "+251-911-456789", bio: "Established the bank's enterprise risk management framework. Former NBE examiner.", bioAm: "የባንኩን የድርጅት ስጋት አስተዳደር ማዕቀፍ አቋቋሙ።" },
-  { id: "exp-4", name: "Fatuma Abdi", nameAm: "ፋቱማ አብዲ", title: "Head - Digital Banking", titleAm: "ኃላፊ - ዲጂታል ባንኪንግ", tags: ["Mobile Banking", "Fintech", "Digital Payments"], tagsAm: ["ሞባይል ባንኪንግ", "ፊንቴክ", "ዲጂታል ክፍያዎች"], email: "fatuma.a@siinqeebank.et", phone: "+251-911-567890", bio: "Led the Wabii digital lending platform from concept to 1M+ users. Fintech innovation champion.", bioAm: "ዋቢ ዲጂታል ብድር መድረክን ከፅንሰ-ሐሳብ እስከ 1M+ ተጠቃሚዎች መርተዋል።" },
-  { id: "exp-5", name: "Getachew Tadesse", nameAm: "ጌታቸው ታደሰ", title: "Senior Manager - Corporate", titleAm: "ከፍተኛ ሥራ አስኪያጅ - ድርጅት", tags: ["Trade Finance", "Letter of Credit", "FX Management"], tagsAm: ["የንግድ ፋይናንስ", "የብድር ደብዳቤ", "FX አስተዳደር"], email: "getachew.t@siinqeebank.et", phone: "+251-911-678901", bio: "Expert in trade finance and cross-border transactions. Manages the bank's FX portfolio.", bioAm: "በንግድ ፋይናንስ እና ድንበር ተሻጋሪ ግብይቶች ባለሙያ።" },
-  { id: "exp-6", name: "Hiwot Alemayehu", nameAm: "ሕይወት አለማየሁ", title: "HR Director", titleAm: "የHR ዳይሬክተር", tags: ["Talent Management", "Training & Development", "Change Management"], tagsAm: ["ችሎታ አስተዳደር", "ስልጠና እና ልማት", "ለውጥ አስተዳደር"], email: "hiwot.a@siinqeebank.et", phone: "+251-911-789012", bio: "Transformed HR practices across 200+ branches. Champion of the bank's learning culture.", bioAm: "በ200+ ቅርንጫፎች ውስጥ የHR ልምዶችን ቀይረዋል።" },
+  { id: "exp-1", name: "Abdulaziz Mohammed", nameAm: "Abdulaziz Mohaammad", title: "VP - Microfinance", titleAm: "I/Pireezidaantii - Maaykiroofaayinaansii", tags: ["Agricultural Loans", "Rural Banking", "SME Finance"], tagsAm: ["Liqii Qonnaa", "Baankii Baadiyyaa", "Faayinaansii SME"], email: "abdulaziz.m@siinqeebank.et", phone: "+251-911-234567", bio: "15+ years in microfinance with deep expertise in agricultural lending. Led the Sebbeta Ayyo product launch.", bioAm: "Waggaa 15 ol maaykiroofaayinaansii keessatti muuxannoo qabu. Eegalcha oomisha Sebbeta Ayyo geggeesseera." },
+  { id: "exp-2", name: "Chaltu Bekele", nameAm: "Caaltuu Baqqalaa", title: "Director - IFB Services", titleAm: "Daayirektara - Tajaajila IFB", tags: ["Sharia Compliance", "Murabaha", "Sukuk"], tagsAm: ["Eegumsa Shari'aa", "Muraabahaa", "Sukuk"], email: "chaltu.b@siinqeebank.et", phone: "+251-911-345678", bio: "Pioneered Siinqee Bank's IFB window. Expert in Sharia-compliant product design.", bioAm: "Foddaa IFB Baankii Siinqee bu'uuressite. Ogeettii dizaayinii oomisha Shari'aatti walii galu." },
+  { id: "exp-3", name: "Dereje Hailu", nameAm: "Dirajjee Haayiluu", title: "Chief Risk Officer", titleAm: "Ofiisara Balaa Olaanaa", tags: ["Cyber Security", "AML/CFT", "Operational Risk"], tagsAm: ["Eegumsa Saayibarii", "AML/CFT", "Balaa Hojii"], email: "dereje.h@siinqeebank.et", phone: "+251-911-456789", bio: "Established the bank's enterprise risk management framework. Former NBE examiner.", bioAm: "Caasaa bulchiinsa balaa baankichaa hundeesseera. Duraan qoraa NBE turan." },
+  { id: "exp-4", name: "Fatuma Abdi", nameAm: "Faaxumaa Abdii", title: "Head - Digital Banking", titleAm: "Hooggantuu - Baankii Dijitaalaa", tags: ["Mobile Banking", "Fintech", "Digital Payments"], tagsAm: ["Baankii Mobaayilaa", "Fintech", "Kaffaltii Dijitaalaa"], email: "fatuma.a@siinqeebank.et", phone: "+251-911-567890", bio: "Led the Wabii digital lending platform from concept to 1M+ users. Fintech innovation champion.", bioAm: "Pilaatformii liqii dijitaalaa Wabii yaadarraa hanga fayyadamtoota 1M+ geggeessite." },
+  { id: "exp-5", name: "Getachew Tadesse", nameAm: "Geetaachoo Taaddasaa", title: "Senior Manager - Corporate", titleAm: "Bulchaa Olaanaa - Dhaabbataa", tags: ["Trade Finance", "Letter of Credit", "FX Management"], tagsAm: ["Faayinaansii Daldalaa", "Xalayaa Liqii", "Bulchiinsa FX"], email: "getachew.t@siinqeebank.et", phone: "+251-911-678901", bio: "Expert in trade finance and cross-border transactions. Manages the bank's FX portfolio.", bioAm: "Ogeessa faayinaansii daldalaa fi gocha daangaa-ce'umsaa. Poortifooliyoo FX baankichaa bulcha." },
+  { id: "exp-6", name: "Hiwot Alemayehu", nameAm: "Hiwoot Alamaayyoo", title: "HR Director", titleAm: "Daayirektara HR", tags: ["Talent Management", "Training & Development", "Change Management"], tagsAm: ["Bulchiinsa Dandeettii", "Leenjii fi Misooma", "Bulchiinsa Jijjiiramaa"], email: "hiwot.a@siinqeebank.et", phone: "+251-911-789012", bio: "Transformed HR practices across 200+ branches. Champion of the bank's learning culture.", bioAm: "Hojii HR damee 200 ol keessatti jijjiirteetti. Aadaa barumsa baankichaa kan jajjabeessitu." },
 ];
 
 export interface KanbanIdea {
@@ -159,17 +199,17 @@ export const defaultKanbanIdeas: {
   implemented: KanbanIdea[];
 } = {
   proposed: [
-    { titleEn: "Mobile Livestock Insurance for Pastoralists", titleAm: "ለአርብቶ አደሮች ሞባይል የከብት ኢንሹራንስ", authorEn: "Kedir Usman - Dire Dawa", authorAm: "ከድር ኡስማን - ድሬ ዳዋ", department: "Microfinance", departmentAm: "ማይክሮፋይናንስ", descriptionEn: "Develop a mobile-first livestock insurance product for pastoralist communities in the Somali and Afar regions. Use satellite imagery for claim verification.", descriptionAm: "ለሶማሊ እና አፋር ክልል አርብቶ አደር ማህበረሰቦች ሞባይል-ተኮር የከብት ኢንሹራንስ ምርት ማዘጋጀት።" },
-    { titleEn: "QR Code Payments for Merkato Traders", titleAm: "ለመርካቶ ነጋዴዎች QR ኮድ ክፍያዎች", authorEn: "Meron Assefa - Addis Ababa", authorAm: "ሜሮን አሰፋ - አዲስ አበባ", department: "Digital Banking", departmentAm: "ዲጂታል ባንኪንግ", descriptionEn: "Introduce QR-code based payments for Merkato's 30,000+ small traders. No smartphone required — works via USSD confirmation.", descriptionAm: "ለመርካቶ 30,000+ ትንንሽ ነጋዴዎች QR-ኮድ ላይ የተመሰረተ ክፍያ ማስተዋወቅ።" },
-    { titleEn: "Diaspora Remittance Savings Bundle", titleAm: "የዲያስፖራ የገንዘብ ልውውጥ ቁጠባ ጥቅል", authorEn: "Yonas Girma - Head Office", authorAm: "ዮናስ ግርማ - ዋና መ/ቤት", department: "Retail Banking", departmentAm: "ችርቻሮ ባንኪንግ", descriptionEn: "Auto-save 5% of every diaspora remittance into a high-yield savings account. Incentivize with bonus interest.", descriptionAm: "ከእያንዳንዱ ዲያስፖራ ገንዘብ ልውውጥ 5% በራስ-ቁጠባ ወደ ከፍተኛ-ምርት ቁጠባ ሒሳብ ማስቀመጥ።" },
+    { titleEn: "Mobile Livestock Insurance for Pastoralists", titleAm: "Inshuraansii Beeyladaa Mobaayilaa Tiksitootaaf", authorEn: "Kedir Usman - Dire Dawa", authorAm: "Kadiir Usmaan - Dirre Dhawaa", department: "Microfinance", departmentAm: "Maaykiroofaayinaansii", descriptionEn: "Develop a mobile-first livestock insurance product for pastoralist communities in the Somali and Afar regions. Use satellite imagery for claim verification.", descriptionAm: "Hawaasa tiksitoota naannoo Somaalee fi Afaaritiif oomisha inshuraansii beeyladaa mobaayilii-dursaa qopheessuu. Mirkaneessa iyyannoof suuraa saatalaayitii fayyadamuu." },
+    { titleEn: "QR Code Payments for Merkato Traders", titleAm: "Kaffaltii Koodii QR Daldaltoota Merkaatootiif", authorEn: "Meron Assefa - Addis Ababa", authorAm: "Meeroon Asaffaa - Finfinnee", department: "Digital Banking", departmentAm: "Baankii Dijitaalaa", descriptionEn: "Introduce QR-code based payments for Merkato's 30,000+ small traders. No smartphone required — works via USSD confirmation.", descriptionAm: "Daldaltoota xixiqqaa Merkaatoo 30,000 oliif kaffaltii koodii QR irratti hundaa'e dhiyeessuu. Bilbila moosaajii hin barbaachisu — USSDn hojjeta." },
+    { titleEn: "Diaspora Remittance Savings Bundle", titleAm: "Hidhaa Qusannoo Erga-Maallaqaa Diyaaspooraa", authorEn: "Yonas Girma - Head Office", authorAm: "Yoonaas Girmaa - Waajjira Olaanaa", department: "Retail Banking", departmentAm: "Baankii Daldalaa", descriptionEn: "Auto-save 5% of every diaspora remittance into a high-yield savings account. Incentivize with bonus interest.", descriptionAm: "Erga maallaqa diyaaspooraa hunda irraa %5 ofumaan gara herrega qusannoo bu'aa ol'aanaa qabuutti olkaa'uu. Dhalaa dabalataan onnachiisuu." },
   ],
   underReview: [
-    { titleEn: "Crop Yield-Based Loan Repayment Schedule", titleAm: "በሰብል ምርት ላይ የተመሠረተ ብድር መክፈያ መርሃ ግብር", authorEn: "Tolosa Benti - Jimma", authorAm: "ቶሎሳ ቤንቲ - ጅማ", department: "Microfinance", departmentAm: "ማይክሮፋይናንስ", descriptionEn: "Flexible repayment schedules based on actual crop yields rather than fixed monthly installments.", descriptionAm: "ከቋሚ ወርሃዊ ክፍያዎች ይልቅ በትክክለኛ ሰብል ምርት ላይ የተመሰረተ ተለዋዋጭ መክፈያ።" },
-    { titleEn: "Women Entrepreneur Microfinance Package", titleAm: "የሴት ሥራ ፈጣሪ ማይክሮፋይናንስ ጥቅል", authorEn: "Sara Tesfaye - Hawassa", authorAm: "ሳራ ተስፋዬ - ሐዋሳ", department: "Microfinance", departmentAm: "ማይክሮፋይናንስ", descriptionEn: "Bundled package with business training, group lending, and mentorship for women entrepreneurs.", descriptionAm: "ለሴት ሥራ ፈጣሪዎች ንግድ ስልጠና፣ የቡድን ብድር እና አማካሪነት ያካተተ ጥቅል።" },
+    { titleEn: "Crop Yield-Based Loan Repayment Schedule", titleAm: "Sagantaa Kaffaltii Liqii Bu'aa Midhaaniin", authorEn: "Tolosa Benti - Jimma", authorAm: "Tolosaa Bantii - Jimmaa", department: "Microfinance", departmentAm: "Maaykiroofaayinaansii", descriptionEn: "Flexible repayment schedules based on actual crop yields rather than fixed monthly installments.", descriptionAm: "Sagantaa kaffaltii salphisaa bu'aa midhaanii dhugaa irratti hundaa'e malee kaffaltii ji'aa walfakkaataa miti." },
+    { titleEn: "Women Entrepreneur Microfinance Package", titleAm: "Pakeejii Maaykiroofaayinaansii Dubartoota Daldaltuu", authorEn: "Sara Tesfaye - Hawassa", authorAm: "Saaraa Tasfaayee - Hawaasaa", department: "Microfinance", departmentAm: "Maaykiroofaayinaansii", descriptionEn: "Bundled package with business training, group lending, and mentorship for women entrepreneurs.", descriptionAm: "Pakeejii leenjii daldalaa, liqii garee fi gorsa dubartoota daldaltuuf walitti qabame." },
   ],
   implemented: [
-    { titleEn: "Biometric KYC for Rural Branches", titleAm: "ለገጠር ቅርንጫፎች ባዮሜትሪክ KYC", authorEn: "Lemma Dinka - Adama", authorAm: "ለማ ዲንካ - አዳማ", department: "Corporate Services", departmentAm: "የድርጅት አገልግሎቶች", descriptionEn: "Fingerprint-based KYC verification deployed across 50 rural branches, reducing onboarding time by 70%.", descriptionAm: "በ50 ገጠር ቅርንጫፎች የጣት አሻራ ላይ የተመሰረተ KYC ማረጋገጫ ተሰማርቷል።" },
-    { titleEn: "Afaan Oromoo Mobile Banking Interface", titleAm: "የአፋን ኦሮሞ ሞባይል ባንኪንግ በይነገጽ", authorEn: "Bontu Fikadu - IT Dept", authorAm: "ቦንቱ ፍቃዱ - IT ዲፓርትመንት", department: "Digital Banking", departmentAm: "ዲጂታል ባንኪንግ", descriptionEn: "Full Afaan Oromoo localization of the mobile banking app, increasing active users in Oromia by 35%.", descriptionAm: "የሞባይል ባንኪንግ መተግበሪያ ሙሉ የአፋን ኦሮሞ ቋንቋ ድጋፍ።" },
+    { titleEn: "Biometric KYC for Rural Branches", titleAm: "KYC Baayoomeetirikii Damee Baadiyyaaf", authorEn: "Lemma Dinka - Adama", authorAm: "Lammaa Diinkaa - Adaamaa", department: "Corporate Services", departmentAm: "Tajaajila Dhaabbataa", descriptionEn: "Fingerprint-based KYC verification deployed across 50 rural branches, reducing onboarding time by 70%.", descriptionAm: "Mirkaneessa KYC quba irratti hundaa'e damee baadiyyaa 50 keessatti hojiirra oolfame, yeroo galmee %70n hir'iseera." },
+    { titleEn: "Afaan Oromoo Mobile Banking Interface", titleAm: "Wal-quunnamtii Baankii Mobaayilaa Afaan Oromoo", authorEn: "Bontu Fikadu - IT Dept", authorAm: "Bontuu Fiqaaduu - Kutaa IT", department: "Digital Banking", departmentAm: "Baankii Dijitaalaa", descriptionEn: "Full Afaan Oromoo localization of the mobile banking app, increasing active users in Oromia by 35%.", descriptionAm: "Appii baankii mobaayilaa guutummaatti gara Afaan Oromootti hiikuu, fayyadamtoota Oromiyaa keessaa %35n dabaleera." },
   ],
 };
 
@@ -177,9 +217,9 @@ export const lessons = [
   {
     id: "lesson-1",
     titleEn: "Flood Risk Mitigation for Somali Region Loans",
-    titleAm: "ለሶማሊ ክልል ብድሮች የጎርፍ ስጋት ቅነሳ",
+    titleAm: "Hir'isuu Balaa Lolaa Liqii Naannoo Somaaleetiif",
     category: "Risk & Compliance",
-    categoryAm: "ስጋት እና ተገዢነት",
+    categoryAm: "Balaa fi Eegumsa Seeraa",
     impact: "high" as const,
     submittedBy: "Abdi Osman",
     date: "2025-03-20",
@@ -200,14 +240,14 @@ export const lessons = [
 </ul>
 <h3>Outcome</h3>
 <p>After implementation, the portfolio-at-risk in flood zones decreased by 45% in Q1 2025.</p>`,
-    detailAm: "ዝርዝር መረጃ ለሶማሊ ክልል ጎርፍ ስጋት ቅነሳ ስልቶች።",
+    detailAm: "Ibsa bal'aa tarsiimoo hir'isuu balaa lolaa naannoo Somaaleetiif.",
   },
   {
     id: "lesson-2",
     titleEn: "Customer Retention During System Migration",
-    titleAm: "በስርዓት ፍልሰት ወቅት ደንበኞችን ማቆየት",
+    titleAm: "Maamiltoota Yeroo Jijjiirraa Sirnaatti Eeguu",
     category: "Digital Banking",
-    categoryAm: "ዲጂታል ባንኪንግ",
+    categoryAm: "Baankii Dijitaalaa",
     impact: "high" as const,
     submittedBy: "Mekdes Haile",
     date: "2025-02-14",
@@ -228,14 +268,14 @@ export const lessons = [
 </ul>
 <h3>Outcome</h3>
 <p>Recovered 89% of churned customers within 3 months. Net Promoter Score returned to baseline by March 2025.</p>`,
-    detailAm: "ዝርዝር መረጃ ለስርዓት ፍልሰት ወቅት ደንበኛ ማቆየት ስልቶች።",
+    detailAm: "Ibsa bal'aa tarsiimoo maamiltoota yeroo jijjiirraa sirnaatti eeguu.",
   },
   {
     id: "lesson-3",
     titleEn: "Training Effectiveness: Peer Learning vs. Classroom",
-    titleAm: "የስልጠና ውጤታማነት: የእኩያ ትምህርት vs. ክፍል ውስጥ",
+    titleAm: "Bu'a-qabeessummaa Leenjii: Barumsa Hiriyaa vs. Daree",
     category: "Human Capital",
-    categoryAm: "የሰው ሀብት",
+    categoryAm: "Qabeenya Namaa",
     impact: "medium" as const,
     submittedBy: "Biruk Tadesse",
     date: "2025-01-30",
@@ -250,14 +290,14 @@ export const lessons = [
 </ul>
 <h3>Recommendation</h3>
 <p>Adopt a blended learning model: 2-day classroom foundation + weekly peer learning circles for 8 weeks.</p>`,
-    detailAm: "ዝርዝር መረጃ ለስልጠና ውጤታማነት ማወዳደሪያ ጥናት።",
+    detailAm: "Ibsa bal'aa qorannoo waliin madaalchisaa bu'a-qabeessummaa leenjii.",
   },
   {
     id: "lesson-4",
     titleEn: "Cross-Selling IFB Products to Conventional Clients",
-    titleAm: "ለተለምዶ ደንበኞች IFB ምርቶች ማቅረብ",
+    titleAm: "Oomishaalee IFB Maamiltoota Idileetti Gurguruu",
     category: "IFB Services",
-    categoryAm: "IFB አገልግሎቶች",
+    categoryAm: "Tajaajila IFB",
     impact: "high" as const,
     submittedBy: "Amina Hussen",
     date: "2025-03-05",
@@ -271,14 +311,14 @@ export const lessons = [
 </ul>
 <h3>Recommendation</h3>
 <p>All customer-facing staff should complete IFB awareness training. Market IFB products as "ethical finance" alongside religious compliance messaging.</p>`,
-    detailAm: "ዝርዝር መረጃ ለIFB ምርቶች ለተለምዶ ደንበኞች ማቅረብ ስልቶች።",
+    detailAm: "Ibsa bal'aa tarsiimoo oomishaalee IFB maamiltoota idileetti gurguruu.",
   },
   {
     id: "lesson-5",
     titleEn: "Branch Layout Optimization for Queue Management",
-    titleAm: "ለወረፋ አስተዳደር የቅርንጫፍ ዝግጅት ማሻሻል",
+    titleAm: "Fooyya'iinsa Caasaa Damee Bulchiinsa Tarreef",
     category: "Operations",
-    categoryAm: "ሥራዎች",
+    categoryAm: "Hojiilee",
     impact: "medium" as const,
     submittedBy: "Dawit Mengistu",
     date: "2024-12-18",
@@ -292,21 +332,21 @@ export const lessons = [
 </ul>
 <h3>Recommendation</h3>
 <p>Deploy self-service kiosks and express counters in all branches with 500+ daily transactions.</p>`,
-    detailAm: "ዝርዝር መረጃ ለቅርንጫፍ ወረፋ አስተዳደር ማሻሻያ።",
+    detailAm: "Ibsa bal'aa fooyya'iinsa bulchiinsa tarree damee.",
   },
 ];
 
 // Notifications
 export const notifications = [
-  { id: "n1", titleEn: "New AML Policy Update Published", titleAm: "አዲስ AML ፖሊሲ ዝማኔ ታትሟል", time: "10 min ago", timeAm: "ከ10 ደቂቃ በፊት", read: false, type: "document" as const },
-  { id: "n2", titleEn: "Expert Chaltu Bekele replied to your message", titleAm: "ባለሙያ ጫልቱ በቀለ ለመልዕክትዎ መለሰች", time: "1 hour ago", timeAm: "ከ1 ሰዓት በፊት", read: false, type: "expert" as const },
-  { id: "n3", titleEn: "Your idea 'QR Payments' moved to Under Review", titleAm: "ሃሳብዎ 'QR ክፍያዎች' ወደ ግምገማ ተዛውሯል", time: "3 hours ago", timeAm: "ከ3 ሰዓት በፊት", read: true, type: "idea" as const },
-  { id: "n4", titleEn: "New lesson learned added: Flood Risk Mitigation", titleAm: "አዲስ ትምህርት ተጨምሯል: የጎርፍ ስጋት ቅነሳ", time: "1 day ago", timeAm: "ከ1 ቀን በፊት", read: true, type: "lesson" as const },
+  { id: "n1", titleEn: "New AML Policy Update Published", titleAm: "Haaromsi Imaammata AML Haaraa Maxxanfameera", time: "10 min ago", timeAm: "Daqiiqaa 10 dura", read: false, type: "document" as const },
+  { id: "n2", titleEn: "Expert Chaltu Bekele replied to your message", titleAm: "Ogeettii Caaltuu Baqqalaa ergaa keetiif deebi'iteetti", time: "1 hour ago", timeAm: "Sa'aa 1 dura", read: false, type: "expert" as const },
+  { id: "n3", titleEn: "Your idea 'QR Payments' moved to Under Review", titleAm: "Yaadni kee 'Kaffaltii QR' gara Qorannoo Jalaatti darbeera", time: "3 hours ago", timeAm: "Sa'aa 3 dura", read: true, type: "idea" as const },
+  { id: "n4", titleEn: "New lesson learned added: Flood Risk Mitigation", titleAm: "Barnoonni haaraan dabalameera: Hir'isuu Balaa Lolaa", time: "1 day ago", timeAm: "Guyyaa 1 dura", read: true, type: "lesson" as const },
 ];
 
 // FAQ / Help items
 export const faqItems = [
-  { questionEn: "How do I submit a new document to the Knowledge Base?", questionAm: "ወደ እውቀት ቋቱ አዲስ ሰነድ እንዴት ላስገባ?", answerEn: "Navigate to the Knowledge Base section, click 'Upload Document', fill in the metadata (title, department, tags), and upload your file. It will be reviewed by the department head before publishing.", answerAm: "ወደ እውቀት ቋቱ ክፍል ይሂዱ፣ 'ሰነድ ስቀል' ይጫኑ፣ መረጃውን ይሙሉ።" },
-  { questionEn: "How can I book a consultation with an expert?", questionAm: "ከባለሙያ ጋር ምክክር እንዴት ልያዝ?", answerEn: "Go to the Expert Locator, find the expert you need, and click 'Book Consult'. Select an available time slot and provide a brief topic description.", answerAm: "ወደ ባለሙያ ፈላጊ ይሂዱ፣ የሚፈልጉትን ባለሙያ ያግኙ፣ 'ምክክር ይያዙ' ይጫኑ።" },
-  { questionEn: "What happens after I submit an innovation idea?", questionAm: "ፈጠራ ሃሳብ ካስገባሁ በኋላ ምን ይሆናል?", answerEn: "Your idea enters the 'Proposed' column. The Innovation Committee reviews new ideas monthly. If selected, it moves to 'Under Review' for feasibility analysis, then to 'Implemented' upon completion.", answerAm: "ሃሳብዎ 'የቀረበ' አምድ ውስጥ ይገባል። የፈጠራ ኮሚቴው ወርሃዊ ይገመግማል።" },
+  { questionEn: "How do I submit a new document to the Knowledge Base?", questionAm: "Akkamiin galmee haaraa gara Kuusaa Beekumsaatti dhiyeessa?", answerEn: "Navigate to the Knowledge Base section, click 'Upload Document', fill in the metadata (title, department, tags), and upload your file. It will be reviewed by the department head before publishing.", answerAm: "Gara kutaa Kuusaa Beekumsaa deemi, 'Galmee Olkaa'i' cuqaasi, odeeffannoo guuti, faayilii kee olkaa'i. Hooggantuu kutaatiin osoo hin maxxanfamiin dura ilaalama." },
+  { questionEn: "How can I book a consultation with an expert?", questionAm: "Akkamiin ogeessa waliin marii qabachuu danda'a?", answerEn: "Go to the Expert Locator, find the expert you need, and click 'Book Consult'. Select an available time slot and provide a brief topic description.", answerAm: "Gara Galmee Ogeessotaa deemi, ogeessa barbaaddu argadhu, 'Marii Qabadhu' cuqaasi. Yeroo jiru filadhuu fi mata-duree gabaabaa kenni." },
+  { questionEn: "What happens after I submit an innovation idea?", questionAm: "Erga yaada kalaqaa dhiyeessee booda maaltu ta'a?", answerEn: "Your idea enters the 'Proposed' column. The Innovation Committee reviews new ideas monthly. If selected, it moves to 'Under Review' for feasibility analysis, then to 'Implemented' upon completion.", answerAm: "Yaadni kee gara tarree 'Dhiyaate' seena. Koreen Kalaqaa yaadota haaraa ji'aan ilaalti. Yoo filatame, gara 'Qorannoo Jalaa' fi booda 'Hojiirra Oolfame'tti darba." },
 ];

@@ -1,22 +1,42 @@
-import { Search, FileText, Users, Lightbulb, GitBranch, ArrowRight, Clock, X, BookOpen, Star } from "lucide-react";
+import { Search, FileText, Users, Lightbulb, GitBranch, ArrowRight, Clock, X, BookOpen, Star, Trash2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useMemo } from "react";
 import type { Language } from "@/lib/translations";
 import { t } from "@/lib/translations";
 import { quickLinks, branchInsights, documents, experts, lessons } from "@/lib/dummy-data";
 import type { TabId } from "@/components/KMSSidebar";
+import { useAuth, ROLE_META, type Role } from "@/hooks/use-auth";
+import { useActivity, trackActivity, type ActivityType } from "@/hooks/use-activity";
 
 interface DashboardViewProps {
   lang: Language;
   onNavigate?: (tab: TabId) => void;
 }
 
-const stats = [
-  { key: "totalDocuments" as const, value: "2,847", icon: FileText, change: "+12%" },
-  { key: "activeExperts" as const, value: "156", icon: Users, change: "+5" },
-  { key: "ideasSubmitted" as const, value: "89", icon: Lightbulb, change: "+23%" },
-  { key: "branchUpdates" as const, value: "34", icon: GitBranch, change: "This week" },
+const allStats = [
+  { key: "totalDocuments" as const, value: "2,847", icon: FileText, change: "+12%", roles: ["officer", "manager", "executive"] as Role[] },
+  { key: "activeExperts" as const, value: "156", icon: Users, change: "+5", roles: ["officer", "manager", "executive"] as Role[] },
+  { key: "ideasSubmitted" as const, value: "89", icon: Lightbulb, change: "+23%", roles: ["manager", "executive"] as Role[] },
+  { key: "branchUpdates" as const, value: "34", icon: GitBranch, change: "This week", roles: ["manager", "executive"] as Role[] },
 ];
+
+const activityIcons: Record<ActivityType, typeof FileText> = {
+  document: FileText, expert: Users, lesson: BookOpen, idea: Lightbulb, quicklink: Star,
+};
+const activityTabs: Record<ActivityType, TabId> = {
+  document: "knowledge-base", expert: "expert-locator", lesson: "lessons-learned", idea: "innovation-hub", quicklink: "knowledge-base",
+};
+
+function timeAgo(ts: number, lang: Language): string {
+  const diff = Date.now() - ts;
+  const m = Math.floor(diff / 60000);
+  if (m < 1) return lang === "en" ? "just now" : "amma";
+  if (m < 60) return lang === "en" ? `${m}m ago` : `Daqiiqaa ${m} dura`;
+  const h = Math.floor(m / 60);
+  if (h < 24) return lang === "en" ? `${h}h ago` : `Sa'aa ${h} dura`;
+  const d = Math.floor(h / 24);
+  return lang === "en" ? `${d}d ago` : `Guyyaa ${d} dura`;
+}
 
 type SearchResult = {
   type: "document" | "expert" | "quicklink" | "lesson";
@@ -65,16 +85,25 @@ export function DashboardView({ lang, onNavigate }: DashboardViewProps) {
 
   const typeIcons = { document: FileText, expert: Users, quicklink: Star, lesson: BookOpen };
   const typeLabels = { document: "Document", expert: "Expert", quicklink: "Quick Link", lesson: "Lesson" };
+  const { user } = useAuth();
+  const { activity, clear } = useActivity();
+  const stats = useMemo(() => allStats.filter((s) => !user || s.roles.includes(user.role)), [user]);
+  const roleLabel = user ? (lang === "en" ? ROLE_META[user.role].en : ROLE_META[user.role].om) : "";
 
   return (
     <div className="space-y-8">
       {/* Welcome & Search */}
       <div>
         <motion.h1 initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="text-2xl font-display font-bold text-foreground">
-          {t(lang, "welcomeBack")}, Obbo Tadesse 👋
+          {t(lang, "welcomeBack")}, {user?.name || "Friend"} 👋
         </motion.h1>
-        <p className="text-muted-foreground text-sm mt-1">
-          {lang === "en" ? "Access knowledge, connect with experts, and drive innovation." : "እውቀት ያግኙ፣ ከባለሙያዎች ጋር ይገናኙ፣ እና ፈጠራን ያንቀሳቅሱ።"}
+        <p className="text-muted-foreground text-sm mt-1 flex flex-wrap items-center gap-2">
+          {user && (
+            <span className="inline-flex items-center gap-1.5 text-[11px] px-2 py-0.5 rounded-full bg-gold-muted text-gold font-medium">
+              {roleLabel} · {user.branch}
+            </span>
+          )}
+          <span>{lang === "en" ? "Access knowledge, connect with experts, and drive innovation." : "Beekumsa argadhu, ogeessota waliin walqunnami, kalaqa onnachiisi."}</span>
         </p>
       </div>
 
@@ -118,9 +147,13 @@ export function DashboardView({ lang, onNavigate }: DashboardViewProps) {
                         className="w-full flex items-center gap-3 px-4 py-3 hover:bg-muted/50 transition-colors text-left"
                         onClick={() => {
                           setSearch("");
+                          // Synthesize an activity id from titleEn for tracking
+                          const id = result.titleEn.toLowerCase().replace(/\s+/g, "-").slice(0, 40);
+                          trackActivity({ id, type: result.type as ActivityType, titleEn: result.titleEn, titleAm: result.titleAm });
                           if (result.type === "document" && onNavigate) onNavigate("knowledge-base");
                           if (result.type === "expert" && onNavigate) onNavigate("expert-locator");
                           if (result.type === "lesson" && onNavigate) onNavigate("lessons-learned");
+                          if (result.type === "quicklink" && onNavigate) onNavigate("knowledge-base");
                         }}
                       >
                         <div className="w-8 h-8 rounded-lg bg-gold-muted flex items-center justify-center flex-shrink-0">
@@ -157,7 +190,39 @@ export function DashboardView({ lang, onNavigate }: DashboardViewProps) {
         ))}
       </div>
 
-      {/* Quick Links & Branch Insights */}
+      {/* Recent Activity (For You) */}
+      {activity.length > 0 && (
+        <div>
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="font-display font-semibold text-foreground flex items-center gap-2">
+              <Clock size={16} className="text-gold" /> {t(lang, "recentlyViewed")}
+            </h2>
+            <button onClick={clear} className="text-xs text-muted-foreground hover:text-destructive flex items-center gap-1">
+              <Trash2 size={12} /> {t(lang, "clearHistory")}
+            </button>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            {activity.slice(0, 8).map((it) => {
+              const Icon = activityIcons[it.type];
+              return (
+                <button
+                  key={`${it.type}-${it.id}-${it.at}`}
+                  onClick={() => onNavigate?.(activityTabs[it.type])}
+                  className="bg-card border border-border rounded-lg p-3 hover:border-gold/50 transition-colors text-left flex items-start gap-2"
+                >
+                  <div className="w-7 h-7 rounded-md bg-gold-muted flex items-center justify-center flex-shrink-0">
+                    <Icon size={12} className="text-gold" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-xs font-medium text-foreground line-clamp-2 leading-snug">{lang === "en" ? it.titleEn : it.titleAm}</p>
+                    <p className="text-[10px] text-muted-foreground mt-0.5">{timeAgo(it.at, lang)}</p>
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      )}
       <div className="grid lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
           <h2 className="font-display font-semibold text-foreground mb-4">{t(lang, "quickLinks")}</h2>
@@ -168,7 +233,10 @@ export function DashboardView({ lang, onNavigate }: DashboardViewProps) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 + i * 0.08 }}
-                onClick={() => setSelectedQuickLink(link)}
+                onClick={() => {
+                  setSelectedQuickLink(link);
+                  trackActivity({ id: link.id, type: "quicklink", titleEn: link.titleEn, titleAm: link.titleAm });
+                }}
                 className="bg-card border border-border rounded-xl p-4 card-hover cursor-pointer group"
               >
                 <div className="w-8 h-8 rounded-lg gold-gradient flex items-center justify-center mb-3">
